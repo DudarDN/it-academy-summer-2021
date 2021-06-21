@@ -5,22 +5,22 @@
 # Скопируйте список и добавьте в него элемент '2a' так,
 # чтобы в исходном списке этого элемента не было.
 
-l_1 = [i + j for i in "ab" for j in "bcd"]
-print(l_1)
-l_2 = l_1[::2]
-print(l_2)
-l_3 = [str(i) + j for i in range(1, 5) for j in "a"]
-print(l_3)
-print(l_3.pop(1))
-l_4 = l_3.copy()
-l_4.insert(1, "2a")
-print(l_3)
-print(l_4)
+list_1 = [i + j for i in "ab" for j in "bcd"]
+print(list_1)
+list_2 = list_1[::2]
+print(list_2)
+list_3 = [str(i) + j for i in range(1, 5) for j in "a"]
+print(list_3)
+print(list_3.pop(1))
+list_4 = list_3.copy()
+list_4.insert(1, "2a")
+print(list_3)
+print(list_4)
 
 # Т.к. .insert() - метод, нежелательный в использовании, а в 5 п. задачи позиция для добавления
 # элемента "2a" не указана, можно также использовать .append() - добавить "2а" в конец списка.
 
-l_5 = l_3.copy()
-l_5.append("2a")
-print(l_3)
-print(l_5)
+list_5 = list_3.copy()
+list_5.append("2a")
+print(list_3)
+print(list_5)
