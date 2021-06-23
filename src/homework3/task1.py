@@ -6,13 +6,13 @@
 list_num = list(range(1, 101))
 list_FizzBuzz = []
 for i in list_num:
-    if i % 3 == 0 and i % 5 == 0:
+    if not i % 3 and not i % 5:
         i = "FizzBuzz"
         list_FizzBuzz.append(i)
-    elif i % 3 == 0:
+    elif not i % 3:
         i = "Fizz"
         list_FizzBuzz.append(i)
-    elif i % 5 == 0:
+    elif not i % 5:
         i = "Buzz"
         list_FizzBuzz.append(i)
     else:
