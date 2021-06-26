@@ -16,15 +16,7 @@ list_3 = [str(i) + j for i in range(1, 5) for j in "a"]
 print(list_3)
 print(list_3.pop(1))
 list_4 = list_3.copy()
-list_4.insert(1, "2a")
+list_4.append("2a")
 print(list_3)
 print(list_4)
 
-# Т.к. .insert() - метод, нежелательный в использовании,
-# а в 5 п. задачи позиция для добавления элемента "2a" не указана,
-# можно также использовать .append() - добавить "2а" в конец списка.
-
-list_5 = list_3.copy()
-list_5.append("2a")
-print(list_3)
-print(list_5)

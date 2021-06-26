@@ -3,19 +3,12 @@
 # а вместо чисел одновременно кратных и 3 и 5 - FizzBuzz.
 
 
-list_num = list(range(1, 101))
-list_FizzBuzz = []
-for i in list_num:
+for i in range(1, 101):
     if not i % 3 and not i % 5:
-        i = "FizzBuzz"
-        list_FizzBuzz.append(i)
+        print("FizzBuzz")
     elif not i % 3:
-        i = "Fizz"
-        list_FizzBuzz.append(i)
+        print("Fizz")
     elif not i % 5:
-        i = "Buzz"
-        list_FizzBuzz.append(i)
+        print("Buzz")
     else:
-        list_FizzBuzz.append(i)
-
-print(list_FizzBuzz)
+        print(i)

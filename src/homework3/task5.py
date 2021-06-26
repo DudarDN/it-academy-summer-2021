@@ -6,6 +6,8 @@ list_1 = list(input())
 print(list_1)
 list_new = []
 for i in list_1:
-    if i not in list_new:
+    if list_1.count(i) == 1:
         list_new += i
+    else:
+        continue
 print(list_new)
