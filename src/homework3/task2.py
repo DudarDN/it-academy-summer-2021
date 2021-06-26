@@ -19,4 +19,3 @@ list_4 = list_3.copy()
 list_4.append("2a")
 print(list_3)
 print(list_4)
-
