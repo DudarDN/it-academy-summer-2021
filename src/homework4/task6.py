@@ -5,9 +5,12 @@
 
 """
 
-some_text = "Привет !!!\nБудем учиться писать код" \
-            " на python?\tучиться python  нравится всем всем всем  !!!"
+some_text = "Привет!!!\nБудем, ребята, учиться писать код" \
+            " на python?\tучиться (python)  нравится всем всем всем  !"
 print(some_text)
+for punctuation_mark in (".", ",", "?", "!", "!!!" ":", ";", '"', "(", ")"):
+    some_text = some_text.replace(punctuation_mark, "")
 list_words = some_text.split()
 set_unique_words = set(list_words)
 print("В тексте содержится", len(set_unique_words), "различных слов.")
+
