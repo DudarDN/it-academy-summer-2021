@@ -13,4 +13,3 @@ for punctuation_mark in (".", ",", "?", "!", "!!!" ":", ";", '"', "(", ")"):
 list_words = some_text.split()
 set_unique_words = set(list_words)
 print("В тексте содержится", len(set_unique_words), "различных слов.")
-
