@@ -1,4 +1,5 @@
-"""Напишите программу, которая считает общую цену. Вводится M рублей и N копеек
+"""Напишите программу, которая считает общую цену.
+Вводится M рублей и N копеек
 цена, а также количество S товара.
 Посчитайте общую цену в рублях и копейках за L товаров.
 
@@ -135,17 +136,6 @@ def triangle():
         print("Данные неверны.")
 
 
-def runner(*args):
-    if not args:
-        for key in functions_dict:
-            func = functions_dict[key]
-            func()
-    else:
-        for key in args:
-            func = functions_dict[key]
-            func()
-
-
 """Напишите программу, которая печатает цифры от 1 до 100,
 но вместо чисел, кратных 3 пишет Fizz, вместо чисел кратный 5 пишет Buzz,
 а вместо чисел одновременно кратных и 3 и 5 - FizzBuzz.
@@ -216,7 +206,8 @@ def tuples():
     print("Длина кортежа:", len(tuple_2))
 
 
-"""Дан список чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+"""Дан список чисел.
+Посчитайте, сколько в нем пар элементов, равных друг другу.
 Считается, что любые два элемента, равные друг другу
 образуют одну пару, которую необходимо посчитать.
 Входные данные - строка из чисел, разделенная пробелами.
@@ -378,7 +369,10 @@ def all_languages():
     for lang_all in all_know:
         print(lang_all)
     anyone_know = set.union(*list_languages_all)
-    print("Кол-во языков, которые знает хотя бы один школьник:", len(anyone_know))
+    print(
+        "Кол-во языков, которые знает хотя бы один школьник:",
+        len(anyone_know)
+    )
     for lang_one in anyone_know:
         print(lang_one)
 
@@ -395,7 +389,9 @@ def unique_words():
     some_text = "Привет!!!\nБудем, ребята, учиться писать код" \
                 " на python?\tучиться (python)  нравится всем всем всем  !"
     print(some_text)
-    for punctuation_mark in (".", ",", "?", "!", "!!!" ":", ";", '"', "(", ")"):
+    for punctuation_mark in (
+            ".", ",", "?", "!", "!!!" ":", ";", '"', "(", ")"
+    ):
         some_text = some_text.replace(punctuation_mark, "")
     list_words = some_text.split()
     set_unique_words = set(list_words)
@@ -438,5 +434,20 @@ functions_dict = {
     "unique_words": unique_words, "greatest_divisor": greatest_divisor
 }
 
+
+def runner(*args):
+    if not args:
+        for key in functions_dict:
+            func = functions_dict[key]
+            func()
+    else:
+        for key in args:
+            func = functions_dict[key]
+            func()
+
+
 # runner()
-tuples()
+# runner("two_lists_unique")
+
+runner("list_comprehension", "pairs_of_numbers", "unique_elements",
+       "ordered_list", "dict_comprehension", "total_price")
