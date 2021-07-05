@@ -447,7 +447,6 @@ def runner(*args):
 
 
 # runner()
-# runner("two_lists_unique")
-
-runner("list_comprehension", "pairs_of_numbers", "unique_elements",
+# runner("all_languages")
+runner("greatest_divisor", "pairs_of_numbers", "fizz_buzz",
        "ordered_list", "dict_comprehension", "total_price")
