@@ -209,7 +209,7 @@ def tuples():
 
     list_2 = list(tuple_1)
 
-    a, b, c = "a", 2, "python"
+    list_2[0], list_2[1], list_2[2] = "a", 2, "python"
 
     tuple_2 = ("123",)
     for i in tuple_2[0]:
