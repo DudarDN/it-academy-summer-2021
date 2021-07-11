@@ -206,10 +206,13 @@ def list_comprehension():
 def tuples():
     list_1 = ["a", "b", "c"]
     tuple_1 = tuple(list_1)
+    print(tuple_1)
 
     list_2 = list(tuple_1)
+    print(list_2)
 
-    list_2[0], list_2[1], list_2[2] = "a", 2, "python"
+    a, b, c = "a", 2, "python"
+    print(a, b, c)
 
     tuple_2 = ("123",)
     for i in tuple_2[0]:
