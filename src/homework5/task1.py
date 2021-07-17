@@ -409,6 +409,7 @@ def runner(*args):
             func = functions_dict[key]
             func()
 
+
 # runner()
 # runner("all_languages")
 runner("greatest_divisor", "pairs_of_numbers", "fizz_buzz",
