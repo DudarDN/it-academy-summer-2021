@@ -233,7 +233,7 @@ def unique_elements(list_1=None):
     list_new = []
     for i in list_1:
         if list_1.count(i) == 1:
-            list_new += i
+            list_new.append(i)
         else:
             continue
     print(list_new)
@@ -404,33 +404,25 @@ def greatest_divisor(num_1=17, num_2=24):
     )
 
 
-functions_dict = {
-    "total_price": total_price, "longest_word": longest_word,
-    "clean_string": clean_string, "big_small_letters": big_small_letters,
-    "fib_num": fib_num, "palindrome": palindrome, "triangle": triangle,
-    "fizz_buzz": fizz_buzz, "list_comprehension": list_comprehension,
-    "tuples": tuples, "pairs_of_numbers": pairs_of_numbers,
-    "unique_elements": unique_elements, "ordered_list": ordered_list,
-    "dict_comprehension": dict_comprehension,
-    "country_and_cities": country_and_cities,
-    "two_lists_unique": two_lists_unique, "all_languages": all_languages,
-    "only_one_list_unique": only_one_list_unique,
-    "unique_words": unique_words, "greatest_divisor": greatest_divisor
-}
+names_in_module = dir()
+list_names_of_functions = []
+for name in names_in_module:
+    if name.startswith("__") and name.endswith("__"):
+        continue
+    elif name == "ascii_letters":
+        continue
+    else:
+        list_names_of_functions.append(name)
 
 
 def runner(*args):
     if not args:
-        for key in functions_dict:
-            func = functions_dict[key]
-            func()
-    else:
-        for key in args:
-            func = functions_dict[key]
-            func()
+        for func_name in list_names_of_functions:
+            start = globals()[func_name]
+            start()
+    for func_name in args:
+        start = globals()[func_name]
+        start()
 
 
-# runner()
-# runner("all_languages")
-runner("greatest_divisor", "pairs_of_numbers", "fizz_buzz",
-       "ordered_list", "dict_comprehension", "total_price")
+runner("all_languages")
