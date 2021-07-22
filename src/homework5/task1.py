@@ -352,7 +352,7 @@ def only_one_list_unique(list_num_1=None, list_num_2=None):
     print("Чисел входящих тольлко в один из списков:", len(diff_num))
 
 
-def all_languages(n_students=3):
+def all_languages(**kwargs):
     """Домашняя работа № 4, задача № 5
 
     Каждый из N школьников некоторой школы знает Mi языков.
@@ -360,14 +360,14 @@ def all_languages(n_students=3):
     и языки, которые знает хотя бы один из школьников.
 
     """
+    if not kwargs:
+        kwargs = {"first_student": ["English", "Russian", "Belarusian"],
+                  "second_student": ["English", "Russian", "Belarusian",
+                                     "German"],
+                  "third_student": ["Polish", "Belarusian"]}
     list_languages_all = []
-    for i in range(1, n_students + 1):
-        set_languages = set()
-        n_languages = int(input(f"Сколько языков знает школьник № {i}? "))
-        for j in range(n_languages):
-            languages = input("Введите язык: ")
-            set_languages.add(languages)
-        list_languages_all.append(set_languages)
+    for languages in kwargs.values():
+        list_languages_all.append(set(languages))
     all_know = set.intersection(*list_languages_all)
     print("Кол-во языков, которые знают все школьники:", len(all_know))
     for lang_all in all_know:
