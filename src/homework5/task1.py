@@ -282,7 +282,8 @@ def dict_comprehension():
     print(dict_new, type(dict_new), sep="\n")
 
 
-def country_and_cities(n_countries=3):
+def country_and_cities(list_country_and_cities=None,
+                       city_search=None):
     """Домашняя работа № 4, задача № 2
 
     Дан список стран и городов каждой страны. Затем даны названия городов.
@@ -297,22 +298,24 @@ def country_and_cities(n_countries=3):
     в котором находится данный город.
 
     """
+
+    if city_search is None:
+        city_search = ["Moscow", "Kaluga", "Brest", "Grodno"]
+
+    if list_country_and_cities is None:
+        list_country_and_cities = ["Russia Moscow Petersburg Novgorod Kaluga",
+                                   "Belarus Grodno Brest Minsk"]
     dict_country_and_cities = {}
-    for i in range(n_countries):
+    for str_country_and_cities in list_country_and_cities:
         list_cities = []
-        str_country_and_cities = (input("Введите сначала страну, "
-                                        "а затем города,"
-                                        " находящиеся в этой стране: "))
-        list_country_and_cities = str_country_and_cities.split()
-        for cities_of_thr_country in list_country_and_cities[1:]:
-            list_cities.append(cities_of_thr_country)
-            dict_country_and_cities[list_country_and_cities[0]] = list_cities
-    cities = int(input("Введите кол-во запросов на поиск страны по городу: "))
+        str_country_and_cities = str_country_and_cities.split()
+        for cities_of_the_country in str_country_and_cities[1:]:
+            list_cities.append(cities_of_the_country)
+        dict_country_and_cities[str_country_and_cities[0]] = list_cities
     countries = ""
-    for i in range(cities):
-        city_search = input("Введите название города: ")
+    for i in city_search:
         for country, cities_of_the_country in dict_country_and_cities.items():
-            if city_search in cities_of_the_country:
+            if i in cities_of_the_country:
                 countries += country + "\n"
     print(countries)
 
