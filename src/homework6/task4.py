@@ -40,7 +40,7 @@ def func_s(number):
     return count_summa
 
 
-print(func_s(3**20))
+print(func_s(100))
 
 print(func_f.cache_info())
 

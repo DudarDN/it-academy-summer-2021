@@ -15,4 +15,3 @@ def unique_elements(list_1=None):
         else:
             continue
     return list_new
-
