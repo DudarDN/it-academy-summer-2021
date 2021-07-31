@@ -18,6 +18,8 @@ class Test(unittest.TestCase):
     def test_positive_2(self):
         result = task1.total_price(rubles=1, penny=20)
         self.assertEqual(result, "Общая цена составит 9 рублей 60 копеек.")
+        result = task1.total_price(1, 20, 4)
+        self.assertEqual(result, "Общая цена составит 4 рублей 80 копеек.")
         result = task1.total_price()
         self.assertEqual(result, "Общая цена составит 36 рублей 0 копеек.")
 
