@@ -28,7 +28,7 @@ def parametric_decorator(n):
                 return many
             except:
                 count = 0
-                return "Ошибка!"
+                return "Ошибка в декорируемой функции!"
 
         return wrapper
 
