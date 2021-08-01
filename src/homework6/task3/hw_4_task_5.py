@@ -1,6 +1,7 @@
 def all_languages(**kwargs):
     """
     Домашняя работа № 4, задача № 5
+
     Каждый из N школьников некоторой школы знает Mi языков.
     Определите, какие языки знают все школьники
     и языки, которые знает хотя бы один из школьников.
@@ -23,7 +24,3 @@ def all_languages(**kwargs):
     for lang in anyone_know:
         lang_one.append(lang)
     return len(all_know), lang_all, len(anyone_know), lang_one
-
-
-print(all_languages())
-
