@@ -36,7 +36,3 @@ def func_s(number):
     for num in range(1, number + 1):
         count_summa += func_f(num)
     return count_summa
-
-
-print(func_s(100))
-print(func_f.cache_info())
