@@ -20,7 +20,8 @@ class CarRentalService:
         self.car_repository.change_status(car.license_plate, "Reserved")
         return f"Поздравляем, {customer.name}! " \
                f"Вы забронировали автомобиль {car.model}," \
-               f" регистрационный номер: {car.license_plate}."
+               f" регистрационный номер: {car.license_plate}. " \
+               f"Приятной поездки!"
 
     def give_car_back(self, phone):
         license_plate = self.book_repository.get_bookings(phone)
