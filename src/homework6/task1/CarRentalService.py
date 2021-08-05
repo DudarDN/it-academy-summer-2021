@@ -1,5 +1,5 @@
-from src.homework6.task1.BookingData import BookingData
 from src.homework6.task1.Booking import Booking
+from src.homework6.task1.BookingData import BookingData
 from src.homework6.task1.CarData import CarRepository
 
 
