@@ -6,6 +6,3 @@ class Car:
         self.seats = seats
         self.price = price
         self.status = "Free"
-
-
-

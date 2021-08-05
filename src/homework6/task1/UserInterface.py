@@ -1,4 +1,3 @@
-from src.homework6.task1.Car import Car
 from src.homework6.task1.Customer import Customer
 
 
@@ -42,4 +41,3 @@ class UserInterface:
     def give_car_back():
         phone_number = input("Для возврата авто введите ваш номер телефона: ")
         return phone_number
-

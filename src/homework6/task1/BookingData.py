@@ -1,7 +1,4 @@
-from src.homework6.task1.Booking import Booking
-
-
-class BookRepository:
+class BookingData:
 
     def __init__(self):
         self.bookings = []

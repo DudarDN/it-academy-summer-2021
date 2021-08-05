@@ -3,7 +3,8 @@ from src.homework6.task1.CarRentalService import CarRentalService
 
 
 car_service = CarRentalService()
-while True:
+count = 0
+while count < 2:
     seats = UserInterface.ask_for_seats()
     budget = UserInterface.ask_for_budget()
     result_cars = car_service.search(seats, budget)
@@ -21,3 +22,4 @@ while True:
     back_car = UserInterface.give_car_back()
     car_back_info = car_service.give_car_back(back_car)
     print(car_back_info)
+    count += 1

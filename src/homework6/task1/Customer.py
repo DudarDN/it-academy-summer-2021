@@ -4,5 +4,3 @@ class Customer:
         self.age = age
         self.email = email
         self.phone = phone
-
-
