@@ -18,8 +18,9 @@ def get_ranges(list_num):
             if list_new[0] == list_new[-1]:
                 list_final.append((str(list_new[0]) + ","))
             else:
-                list_final.append(str(list_new[0]) + "-"
-                                  + str(list_new[-1]) + ",")
+                list_final.append(
+                    str(list_new[0]) + "-" + str(list_new[-1]) + ","
+                )
             list_new.clear()
             list_new.append(i)
     if list_new[0] == list_new[-1]:
