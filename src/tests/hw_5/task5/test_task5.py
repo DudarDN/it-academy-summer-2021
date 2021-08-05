@@ -1,5 +1,5 @@
 import ddt
-from src.tests.hw_5 import task5
+import task5
 import unittest
 
 
