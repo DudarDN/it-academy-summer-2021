@@ -26,7 +26,7 @@ def parametric_decorator(n):
                     raise TooManyErrors("Слишком много вызовов.")
             except TooManyErrors as many:
                 return many
-            except:
+            except Exception:
                 count = 0
                 return "Ошибка в декорируемой функции!"
 
