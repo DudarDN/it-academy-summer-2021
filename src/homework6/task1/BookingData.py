@@ -16,4 +16,3 @@ class BookingData:
             if license_place == booking.car_id\
                     and phone == booking.customer_id:
                 self.bookings.remove(booking)
-

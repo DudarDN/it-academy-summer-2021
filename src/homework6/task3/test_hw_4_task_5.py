@@ -12,9 +12,8 @@ class Test(unittest.TestCase):
         self.assertCountEqual(result[3],
                               ["Belarusian", "Russian", "Polish", "English",
                                "German"])
-        result = hw_4_task_5.all_languages(student_1=
-                                           ["Belarusian", "Russian",
-                                            "Polish", "English"],
+        result = hw_4_task_5.all_languages(student_1=["Belarusian", "Russian",
+                                                      "Polish", "English"],
                                            student_2=("German",),
                                            student_3={"France"})
         self.assertEqual(result[0], 0)
@@ -22,9 +21,8 @@ class Test(unittest.TestCase):
         self.assertEqual(result[2], 6)
         self.assertCountEqual(result[3], ["Belarusian", "Russian", "Polish",
                                           "English", "German", "France"])
-        result = hw_4_task_5.all_languages(student_1=
-                                           ["Belarusian", "Russian",
-                                            "Polish", "English"])
+        result = hw_4_task_5.all_languages(student_1=["Belarusian", "Russian",
+                                                      "Polish", "English"])
         self.assertEqual(result[0], 4)
         self.assertCountEqual(result[1], ["Belarusian", "Russian",
                                           "Polish", "English"])
@@ -36,9 +34,8 @@ class Test(unittest.TestCase):
         self.assertEqual(result, (0, [], 0, []))
 
     def test_negative(self):
-        result = hw_4_task_5.all_languages(student_1=
-                                           ["Belarusian", "Russian",
-                                            "Polish", "English"],
+        result = hw_4_task_5.all_languages(student_1=["Belarusian", "Russian",
+                                                      "Polish", "English"],
                                            student_2=("German",),
                                            student_3="France")
         self.assertNotEqual(result[2], 6)
