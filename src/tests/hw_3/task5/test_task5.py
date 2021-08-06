@@ -1,6 +1,6 @@
 import ddt
-from . import task5
 import unittest
+from . import task5
 
 
 @ddt.ddt
