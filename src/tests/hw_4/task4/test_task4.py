@@ -1,5 +1,5 @@
-import ddt
 from . import task4
+import ddt
 import unittest
 
 
