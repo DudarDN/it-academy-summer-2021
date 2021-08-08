@@ -1,6 +1,6 @@
-from src.homework6.task1.Booking import Booking
-from src.homework6.task1.BookingData import BookingData
-from src.homework6.task1.CarData import CarRepository
+from src.homework6.task1.booking import Booking
+from src.homework6.task1.booking_data import BookingData
+from src.homework6.task1.car_data import CarRepository
 
 
 class CarRentalService:
@@ -22,8 +22,7 @@ class CarRentalService:
                f"Приятной поездки!"
 
     def give_car_back(self, phone):
-        license_plate = self.booking_repository.get_bookings(phone)
-        self.booking_repository.del_bookings(phone, license_plate)
+        license_plate = self.booking_repository.del_bookings(phone)
         car = self.car_repository.change_status(license_plate, "Free")
         return f"Автомобиль {car.model}, регистрационный номер:" \
                f" {car.license_plate} успешно возвращен!. " \

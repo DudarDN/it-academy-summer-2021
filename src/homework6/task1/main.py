@@ -1,5 +1,5 @@
-from src.homework6.task1.CarRentalService import CarRentalService
-from src.homework6.task1.UserInterface import UserInterface
+from src.homework6.task1.car_rental_service import CarRentalService
+from src.homework6.task1.userInterface import UserInterface
 
 """Домашнее задание № 6, задача № 1.
 

@@ -1,4 +1,4 @@
-from src.homework6.task1.Customer import Customer
+from src.homework6.task1.customer import Customer
 
 
 class UserInterface:

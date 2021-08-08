@@ -1,4 +1,4 @@
-from src.homework6.task1.Car import Car
+from src.homework6.task1.car import Car
 
 
 class CarRepository:
@@ -7,7 +7,7 @@ class CarRepository:
                      Car("1772 BO-7", "BMW X-3", 2013, 5, 45),
                      Car("1773 BO-7", "Opel Zafira", 2020, 7, 60),
                      Car("1774 BO-7", "Audi Q-5", 2019, 5, 55),
-                     Car("1775 BO-7", "Mercedes", 2021, 9, 150),
+                     Car("1775 BO-7", "Mercedes Vito", 2021, 9, 150),
                      ]
 
     def find_by_seats_and_price(self, seats, price):
