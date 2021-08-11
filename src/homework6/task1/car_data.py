@@ -12,12 +12,12 @@ class CarData:
                          Car("1775 BO-7", "Mercedes Vito", 2021, 8, 150),
                      }
 
-    def find_by_seats_and_price(self, seats, price):
+    def find_by_seats_price_model(self, seats, price, model):
         """Находит в 'базе данных' авто по параметрам введенным клиентом"""
         list_cars_for_a_rent = []
         for auto in self.cars.values():
-            if seats <= auto.seats and price >= \
-                    auto.price and auto.status == "Free":
+            if seats <= auto.seats and price >= auto.price and model.lower()\
+                    in auto.model.lower() and auto.status == "Free":
                 list_cars_for_a_rent.append(auto)
 
         return list_cars_for_a_rent

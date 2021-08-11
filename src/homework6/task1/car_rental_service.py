@@ -13,9 +13,10 @@ class CarRentalService:
         self.car_repository = CarData()
         self.booking_repository = BookingData()
 
-    def search(self, seats, price):
+    def search(self, seats, price, model):
         """Возвращает список авто по введенным клиентом параметрам"""
-        cars = self.car_repository.find_by_seats_and_price(seats, price)
+        cars = self.car_repository.find_by_seats_price_model(seats, price,
+                                                             model)
         return cars
 
     def rent_car(self, car, customer):

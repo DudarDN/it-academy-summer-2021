@@ -12,8 +12,8 @@ from src.homework6.task1.userInterface import UserInterface
 введя свой уникальный номер телефона и машина снова доступна к заказу.
 P.S. Понимаю, что модель можно улучшать и улучшать, добавить, к примеру,
 подключение к базе данных, добавить базу данных для клиентов и т.д.
-Но после лекций про flask и Django пребываю в легком шоке и очень хочу на
-выходных выйти из этого состояния.))
+Но после лекций про flask и Django пребываю в легком шоке и хочу как можно 
+скорее выйти из этого состояния.))
 
 """
 
@@ -23,7 +23,8 @@ while True:
     if user_action == 1:
         seats = UserInterface.ask_for_seats()
         budget = UserInterface.ask_for_budget()
-        result_cars = car_service.search(seats, budget)
+        model = UserInterface.ask_for_model()
+        result_cars = car_service.search(seats, budget, model)
         chosen_car = UserInterface.let_user_chose_car(result_cars)
         customer = UserInterface.customer_info()
         booking_info = car_service.rent_car(chosen_car, customer)

@@ -2,7 +2,7 @@ from src.homework6.task1.customer import Customer
 
 
 class UserInterface:
-    """Класс содеращий методы для взаимодействия с пользователем сервиса"""
+    """Класс содержащий методы для взаимодействия с пользователем сервиса"""
     @staticmethod
     def do_something():
         more_cars = int(input("Мы рады видет Вас на нашем сервисе "
@@ -29,15 +29,26 @@ class UserInterface:
         return budget
 
     @staticmethod
+    def ask_for_model():
+        model = input("Введите марку и модель автомобиля, которую Вы "
+                      "желали бы взять в аренду: ")
+        return model
+
+    @staticmethod
     def let_user_chose_car(cars):
-        print("Для Вас доступны следующие автомобили:")
-        for i, car in enumerate(cars):
-            print(f"{i + 1}. Model: {car.model}. Price: {car.price}")
+        if not cars:
+            print("К сожалению, у нас нет автомобилей соответствующих Вашему "
+                  "запросу.\nДо свидания!")
+            return quit()
+        else:
+            print("Для Вас доступны следующие автомобили:")
+            for i, car in enumerate(cars):
+                print(f"{i + 1}. Model: {car.model}. Price: {car.price}")
 
-        index_chosen_car = int(input("Введите порядковый номер автомобиля, "
-                                     "который Вы хотели бы арендовать: "))
+            index_chosen_car = int(input("Введите порядковый номер автомобиля,"
+                                         " который Вы хотели бы арендовать: "))
 
-        return cars[index_chosen_car - 1]
+            return cars[index_chosen_car - 1]
 
     @staticmethod
     def customer_info():
