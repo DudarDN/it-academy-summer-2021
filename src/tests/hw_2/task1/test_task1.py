@@ -38,7 +38,7 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_negative_1(self, rubles, penny, number, expected):
-        """Тест некоректной работы функции с различными типами данными"""
+        """Тест некоректной работы функции с различными типами данных"""
         with self.assertRaises(expected):
             task1.total_price(rubles, penny, number)
 

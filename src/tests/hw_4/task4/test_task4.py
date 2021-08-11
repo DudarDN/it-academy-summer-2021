@@ -15,10 +15,17 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_positive_1(self, list1, list2, expected):
+        """Проверка корректной работы функции с различными типами данных"""
         result = task4.only_one_list_unique(list1, list2)
         self.assertEqual(result, expected)
 
     def test_positive_2(self):
+        """Проверка корректной работы функции.
+
+        Тестирование способности функции работать со значениями по умолчанию,
+        с различными типами и количеством аргументов.
+
+        """
         result = task4.only_one_list_unique()
         self.assertEqual(result, 5)
         result = task4.only_one_list_unique([6, 6, 5])
@@ -32,10 +39,17 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_negative_1(self, list1, list2, expected):
+        """Тест некоректной работы функции с различными типами данными"""
         with self.assertRaises(expected):
             task4.only_one_list_unique(list1, list2)
 
     def test_negative_2(self):
+        """Проверка некорректной работы функции.
+
+        При передаче бОльшего кол-ва аргументов, а также при передаче
+        аргумента с некорректным именем функция вернет ошибку.
+
+        """
         with self.assertRaises(TypeError):
             task4.only_one_list_unique(list=[1, 2, 3, 4])
         with self.assertRaises(TypeError):

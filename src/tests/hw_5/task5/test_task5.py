@@ -16,6 +16,7 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_positive(self, input_data, expected):
+        """Тестирование корректной работы функции"""
         result = task5.power_of_two(input_data)
         self.assertEqual(result, expected)
 
@@ -26,11 +27,13 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_negative_1(self, input_data, expected):
+        """Тест некорректной работы функции с различными типами данными"""
         with self.assertRaises(expected):
             task5.power_of_two(input_data)
 
     def test_negative_2(self):
         with self.assertRaises(TypeError):
+            """Тест некорректной работы функции при отсутствии аргумента"""
             task5.power_of_two()
 
 

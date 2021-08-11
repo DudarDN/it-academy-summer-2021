@@ -14,7 +14,8 @@ class Test(unittest.TestCase):
         (["0", "1", 2, "3", 4, "7", "8", 10], "0-4, 7-8, 10")
     )
     @ddt.unpack
-    def test_positive_1(self, input_data, expected):
+    def test_positive(self, input_data, expected):
+        """Тест корректной работы функции с различными типами данных"""
         result = task3.get_ranges(input_data)
         self.assertEqual(result, expected)
 
@@ -26,10 +27,12 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_negative_1(self, input_data, expected):
+        """Тест некорректной работы функции с различными типами данных"""
         with self.assertRaises(expected):
             task3.get_ranges(input_data)
 
     def test_negative_2(self):
+        """Тест некорректной работы функции при отсутствии аргумента"""
         with self.assertRaises(TypeError):
             task3.get_ranges()
 
