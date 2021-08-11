@@ -2,7 +2,7 @@ from src.homework6.task1.customer import Customer
 
 
 class UserInterface:
-    """Класс содежащий методы для взаимодействия с пользователем сервиса"""
+    """Класс содеращий методы для взаимодействия с пользователем сервиса"""
     @staticmethod
     def do_something():
         more_cars = int(input("Мы рады видет Вас на нашем сервисе "

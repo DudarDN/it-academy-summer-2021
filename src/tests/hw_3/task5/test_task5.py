@@ -16,10 +16,12 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_positive_1(self, input_data, expected):
+        """Проверка корректной работы функции с различными типами данных"""
         result = task5.unique_elements(input_data)
         self.assertEqual(result, expected)
 
     def test_positive_2(self):
+        """Тест корректной работы функции со значением по умолчанию"""
         result = task5.unique_elements()
         self.assertEqual(result, [5, 3, 7])
 
@@ -30,10 +32,17 @@ class Test(unittest.TestCase):
     )
     @ddt.unpack
     def test_negative_1(self, input_data, expected):
+        """Тест некоректной работы функции с различными типами данными"""
         with self.assertRaises(expected):
             task5.unique_elements(input_data)
 
     def test_negative_2(self):
+        """Проверка некорректной работы функции.
+
+        При передаче бОльшего кол-ва аргументов, а также при передаче
+        именованных аргументов функция вернет ошибку.
+
+       """
         with self.assertRaises(TypeError):
             task5.unique_elements(list=[1, 2, 3, 4])
         with self.assertRaises(TypeError):
