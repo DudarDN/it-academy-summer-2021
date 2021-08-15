@@ -1,5 +1,4 @@
 from src.homework6.task1.car import Car
-import math
 
 
 class CarData:

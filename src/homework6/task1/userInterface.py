@@ -1,4 +1,3 @@
-from src.homework6.task1 import car_rental_service
 from src.homework6.task1.customer import Customer
 
 

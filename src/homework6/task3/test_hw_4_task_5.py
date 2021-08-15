@@ -41,7 +41,6 @@ class Test(unittest.TestCase):
 
     def test_negative_string(self):
         """Передача аргумента в виде строки приведет к неверному результату"""
-
         result = hw_4_task_5.all_languages(student_1=["Belarusian", "Russian",
                                                       "Polish", "English"],
                                            student_2=("German",),
