@@ -1,4 +1,5 @@
 from src.homework6.task1.car import Car
+import math
 
 
 class CarData:
@@ -14,10 +15,15 @@ class CarData:
 
     def find_by_seats_price_model(self, seats, price, model):
         """Находит в 'базе данных' авто по параметрам введенным клиентом"""
+        if seats is not int:
+            seats = 0
+        if price is not int:
+            price = 10000
         list_cars_for_a_rent = []
         for auto in self.cars.values():
-            if seats <= auto.seats and price >= auto.price and model.lower()\
-                    in auto.model.lower() and auto.status == "Free":
+            if int(seats) <= auto.seats and int(price) >= auto.price and \
+                    model.lower() in auto.model.lower() and \
+                    auto.status == "Free":
                 list_cars_for_a_rent.append(auto)
 
         return list_cars_for_a_rent

@@ -1,12 +1,14 @@
+from src.homework6.task1 import car_rental_service
 from src.homework6.task1.customer import Customer
 
 
 class UserInterface:
     """Класс содержащий методы для взаимодействия с пользователем сервиса"""
+
     @staticmethod
     def do_something():
-        more_cars = int(input("Мы рады видет Вас на нашем сервисе "
-                              "по аренде автомобилей!\n"
+        more_cars = int(input("Здравствуйте! Мы рады видет Вас на нашем "
+                              "сервисе по аренде автомобилей!\n"
                               "Для аренды авто введите 1.\n"
                               "Для возврата авто введите 2.\n"
                               "Для выхода из сервиса введите 0.\n"))
@@ -15,16 +17,16 @@ class UserInterface:
 
     @staticmethod
     def ask_for_seats():
-        seats = int(input("Введите минимальное количество мест, "
-                          "необходимое Вам в автомобиле учитывая "
-                          "место водителя: "))
+        seats = input("Введите минимальное количество мест, "
+                      "необходимое Вам в автомобиле учитывая "
+                      "место водителя: ")
 
         return seats
 
     @staticmethod
     def ask_for_budget():
-        budget = int(input("Введите максимальную сумму, которую Вы готовы "
-                           "выплатить за сутки аренды (у.е.): "))
+        budget = input("Введите максимальную сумму, которую Вы готовы "
+                       "выплатить за сутки аренды (у.е.): ")
 
         return budget
 
